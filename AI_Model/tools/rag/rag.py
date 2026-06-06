@@ -16,6 +16,8 @@ Available Functions:
 
 """
 
+from pathlib import Path
+
 import ollama
 import chromadb
 import PyPDF2
@@ -38,7 +40,9 @@ from AI_Model.config import CURRENT_CHAT_ID
 
 # Configuration
 EMBED_MODEL = "mxbai-embed-large"
-DB_PATH = f"AI_Model/memory_cache/{CURRENT_CHAT_ID}/rag_memory"
+
+BASE = Path(__file__).resolve().parent.parent.parent.parent  # project root
+DB_PATH = str(BASE / "cache" / "memory_cache" / CURRENT_CHAT_ID / "rag_memory")
 
 # Chunk sizes - REDUCED to fit within model limits
 DEFAULT_CHUNK_SIZE = 400  # Reduced from 600

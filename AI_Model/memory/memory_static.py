@@ -6,7 +6,7 @@ from ..log import log
 
 
 class StaticMemory:
-    def __init__(self, chat_id: str, base_dir="AI_Model/memory_cache"):
+    def __init__(self, chat_id: str, base_dir="cache/memory_cache"):
         self.chat_id = str(chat_id)
         self.memory_file = os.path.join(base_dir, self.chat_id, "static_memory.json")
         self._lock = Lock()

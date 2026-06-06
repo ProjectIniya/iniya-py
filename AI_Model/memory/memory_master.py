@@ -9,7 +9,7 @@ import ollama
 from pathlib import Path
 from AI_Model.log import log
 
-MASTER_DIR = Path(__file__).resolve().parent.parent.parent / "AI_Model" /"memory_cache" / "_master"
+MASTER_DIR = Path(__file__).resolve().parent.parent.parent / "cache" /"memory_cache" / "_master"
 EMBED_MODEL = "mxbai-embed-large"
 OLLAMA_URL = "http://localhost:11434/api/embeddings"
 TOP_K = 5

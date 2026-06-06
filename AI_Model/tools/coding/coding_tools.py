@@ -49,8 +49,8 @@ BLOCKED_RE = [re.compile(p, re.IGNORECASE) for p in BLOCKED_PATTERNS]
 class CodingTools:
 
     def __init__(self, chat_id: str):
-        BASE = Path(__file__).resolve().parent.parent.parent
-        self.workspace = BASE / "memory_cache" / str(chat_id) / "workspace"
+        BASE = Path(__file__).resolve().parent.parent.parent.parent
+        self.workspace = BASE / "cache" / "memory_cache" / str(chat_id) / "workspace"
         self.workspace.mkdir(parents=True, exist_ok=True)
         log(f"CodingTools workspace: {self.workspace}", "CODING")
 

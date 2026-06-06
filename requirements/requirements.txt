@@ -1,34 +1,92 @@
-chromadb
-ollama
-python-dotenv
-tavily
+# ============================================================
+#  Iniya — Python dependencies
+#  PyTorch + CUDA handled separately in torch_cu130.txt
+# ============================================================
+
+# --- HuggingFace / ML ---
+transformers
+accelerate
+safetensors
+tokenizers
+huggingface_hub
+bitsandbytes
+sentencepiece
+tiktoken
+omegaconf
+ftfy
+
+# --- STT / Whisper ---
+openai-whisper
+faster-whisper
+numba
+
+# --- Audio / Speech ---
+vosk
+soundfile
+sounddevice
+audioop-lts
 elevenlabs
 silero
-onnxruntime 
-soundfile 
-numpy
-audioop-lts
-yt-dlp 
-sounddevice
-flask
-flask_cors
--e ./Visualizer/point-e
-faster-whisper
-huggingface_hub
+av
+
+# --- Vision / CLIP ---
+pillow
+scikit-image
+git+https://github.com/openai/CLIP.git
+
+# --- Inference / Runtime ---
+onnxruntime
+ctranslate2
+
+# --- Document / File Handling ---
 PyPDF2
+pdf2image
 pytesseract
 python-docx
 pandas
 openpyxl
-pdf2image
-pyinstaller
-beautifulsoup4
-detoxify 
-transformers 
-rapidfuzz
-pywebview
+lxml
+
+# --- Web / API ---
+flask
+flask_cors
+requests
+httpx
+aiohttp
 waitress
+uvicorn
+websockets
+websocket-client
+beautifulsoup4
+tavily
+yt-dlp
+tenacity
+backoff
+
+# --- UI ---
+pywebview
+PySide6
+colorama
+rich
+
+# --- Database ---
+chromadb
+
+# --- Utilities ---
+ollama
+python-dotenv
 pythonnet
-vosk
-ctranslate2
+detoxify
+rapidfuzz
+numpy
+tqdm
+regex
+PyYAML
+typer
+psutil
 keyring
+blobfile
+keyboard
+langdetect
+fire
+scipy

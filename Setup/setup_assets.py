@@ -2,7 +2,9 @@ from pathlib import Path
 import subprocess
 import shutil
 import sys, os
-import time
+
+from AI_Model.utils.DeviceProfile import ensure_models, get_profile
+from AI_Model.vizualizer import VizualizerClient
 
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(0, PROJECT_ROOT)
@@ -23,6 +25,7 @@ def download_ollama_models():
         return
 
     models = [
+        "mxbai-embed-large",
         "qwen2.5:7b-instruct-q4_0",
         "qwen2.5:0.5b",
         "qwen3-vl:235b-cloud",
@@ -57,3 +60,6 @@ if __name__ == "__main__":
     print("Note: This may take a good bit of time depending on your internet connection.")
     download_ollama_models()
     download_transformer_models()
+    ensure_models(get_profile())
+    VizualizerClient.download_blenderllm()
+    VizualizerClient.download_shap_e()

@@ -12,7 +12,7 @@ class TaskMemory:
     def __init__(
         self,
         chat_id: str,
-        base_dir="AI_Model/memory_cache",
+        base_dir="cache/memory_cache",
         embed_model="mxbai-embed-large",
         similarity_threshold=0.55,
     ):

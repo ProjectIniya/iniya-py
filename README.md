@@ -1,120 +1,206 @@
-# Project Iniya — The Autonomous AI Assistant (Early Prototype)
+# Project Iniya
 
-###  Status: In Early Development
+### Local-First Personal AI Assistant Platform
 
-This project is an experimental attempt to build a **fully autonomous AI personal assistant** — one that, in the future, may be capable of interacting with the physical world, rendering holographic objects, and functioning as a real-world companion system.
+**Status:** Active Development
 
-Right now, this repository contains only the **core AI "brain" layer**, which will later serve as the control center for:
+Iniya is a local-first AI assistant platform designed to combine conversational AI, long-term memory, voice interaction, tool execution, search, coding assistance, and task management into a unified personal AI system.
 
-- Speech understanding and natural conversation  
-- Cognitive reasoning and memory handling  
-- Interaction with hardware and holographic display systems  
-- Modular software capabilities (vision, mobility, automation, etc.)
+Unlike traditional chatbots, Iniya is built around a modular architecture that allows new capabilities to be added as independent components while maintaining persistent memory and contextual awareness across conversations.
 
-The goal is not just to make another chatbot — but to create a **long-term scalable assistant architecture** that can grow far beyond text-only interaction.
+The long-term goal is to create a personal AI companion that can reason, remember, communicate naturally, execute tasks, and interact with both software and physical systems.
 
 ---
-## Installation and Usage
 
-- Make sure to have Python and Nvidia Drivers(if using nvidia GPU) installed
-- Make sure you have winget, otherwise you have to install mpv, ffmpeg, ollama manually
-- Install this Project to your Device Using the Following commands:
+# Features
 
-```
+### AI Reasoning
+
+* Powered by Ollama
+* Support for local and cloud-hosted models
+* Model warm-up and management system
+* Centralized LLM abstraction layer
+
+### Multi-Layer Memory
+
+#### Chat Memory
+
+* Persistent conversation history
+* Multi-chat support
+
+#### Master Memory
+
+* Cross-conversation knowledge storage
+* Embedding-based retrieval
+* Semantic similarity search
+* Duplicate detection
+
+#### Task Memory
+
+* Persistent task tracking
+* Priority management
+* Due-date extraction
+* Intelligent task retrieval
+
+### Tool System
+
+Built-in tools for:
+
+* File operations
+* Code execution
+* Shell execution
+* Search
+* Task management
+* Protocol execution
+
+### Search Integration
+
+* Tavily-powered web search
+* Search result summarization
+* Context-aware information retrieval
+
+### Voice Assistant
+
+#### Speech-to-Text
+
+* Vosk
+* Whisper
+
+#### Text-to-Speech
+
+* Piper
+
+#### Audio Features
+
+* Streaming audio infrastructure
+* Device-aware configuration
+* Offline-capable voice pipeline
+
+### Agent Architecture
+
+* BrainAgent orchestration system
+* Skill classification and routing
+* Personality framework
+* Response processing pipeline
+* Tool selection logic
+
+### User Interfaces
+
+#### Console Interface
+
+* Full-featured terminal interface
+
+#### GUI
+
+* Graphical interface under active development
+* Multi-chat management
+* Voice integration support
+
+---
+
+# Installation
+
+### Requirements
+
+* Python 3.13+
+* Ollama
+* FFmpeg
+* MPV
+* Windows 10/11
+
+Optional:
+
+* NVIDIA GPU for accelerated local models
+
+---
+
+### Setup
+
+```bash
 git clone https://github.com/project-iniya/project-iniya
 cd project-iniya
 python setup.py
 ```
-- To Try/Test the Project run this command: `python main.example.py`
 
----
-##  Software Requirments
+Run:
 
-- Python 3.13
-- ffmpeg, mpv for Audio
-- Nvidia GPU with Cuda for offline ollama models
-- Ollama Cloud model also Usable
-- Edit `AI_Model/llm_wrapper.py` To Change or Try/Test Models. Defualt Model is `qwen3-coder-next:cloud`
-- This is a Windows Only Project. No plans for adding Linux Support
-
-#### CUDA
-- This Project Contains Cuda Runtime DLLS which are a Property of Nvidia Coorporation
-- This Project Ships with Cuda runtime Dlls of verision v13.0
-
-#### HF Assets
-- The Assets such as Models, DLLS, Binaries are Hosted separately on Hugging Face as a Dataset
-- Assets Dataset Link - [Project-Iniya-Assets](https://huggingface.co/datasets/night-games-20/project-Iniya-Assets/tree/main)
+```bash
+python main.example.py
+```
 
 ---
 
-##  Vision (Long-Term Goals)
+# Default Model
 
-- 🗣️ Natural human-level interaction  
-- 🎭 Personality and emotion simulation  
-- 📡 Multi-device awareness  
-- 🧩 Modular expansion for skills and tools  
-- 🔮 Future projection: hologram-style visual interface  
-- 🤖 Integration with robotics, AR, smart environments  
+Current default model:
 
----
+```text
+qwen3-coder-next:cloud
+```
 
-##  Current Stage
+Models can be changed inside:
 
-✔ AI reasoning engine (foundation)  
-✔ Prompt framework and architecture  
-✔ Experimental memory layer  
-✔ Voice TTS Added(only the TTS Scripts and Models, No integration)  
-✔ Voice STT Added(only the STT Scripts and Models, No integration)  
-✔ Added Visualization(only Scripts)  
-
-❌ Voice interface  
-❌ Physical holographic output  
-❌ Hardware integration  
-
-Those systems will be added in future iterations.
+```text
+AI_Model/llm_wrapper.py
+```
 
 ---
 
-##  Tech Stack (Current)
+# Technology Stack
 
-- Python
-- Large Language Model logic and assistant framework using Ollama
-- Memory and context handling modules
-- Modular architecture for future expansion
+## Core
 
----
+* Python
+* Ollama
+* Multiprocessing
+* Shared-state architecture
 
-## Audio Stack (Current)
+## Memory
 
-- Main Audio TTS interface is Elevenlabs API with its Flash v2.5 Model
-- secondary offline TTS is Silero TTS with its en_v5 TTS Model
-- Audio Play using mpv through subprocess module
-- STT using faster-whisper library 
-- STT Models used whisper-tiny
+* mxbai-embed-large embeddings
+* Vector similarity search
+* Persistent storage
 
----
+## Search
 
-## Visualiztion
+* Tavily Search API
 
-- This Project Uses Point-E which is a Ai Model Provided by OpenAI
-- Uses a Custom Build cloudPoint to SDF encoder
-- Uses Three.js to use SDF encodings to display Objects 
+## Voice
 
----
+* Whisper
+* Vosk
+* Piper
 
 ## GUI
 
-- Work in Progress 
-- Pywebview based on edge WebView2
-- Web built on Vite + Vue With Javascript
-- GUI added but not integrated with The Main Script 
+* PyWebView
+* Edge WebView2
+* Vite
+* Vue.js
 
 ---
 
-## License! 
+# Project Vision
 
-This repository is protected under the **Custom Restricted License (CRL-1.0)**.  
-Modification or redistribution of the code is **prohibited** without  
-explicit written permission from the author.
+Iniya is being developed as a long-term AI platform capable of:
 
-See the `LICENSE` file for full terms.
+* Natural conversation
+* Long-term memory
+* Voice-first interaction
+* Autonomous task execution
+* Tool and software control
+* Multi-device awareness
+* Physical-world integration
+* Future robotics and smart-environment support
+
+The objective is to build a practical personal AI system that extends beyond chat and becomes a persistent digital assistant.
+
+---
+
+# License
+
+This repository is protected under the Custom Restricted License (CRL-1.0).
+
+Modification or redistribution is prohibited without explicit permission from the author.
+
+See the LICENSE file for complete terms.

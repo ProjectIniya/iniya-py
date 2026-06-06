@@ -7,8 +7,8 @@ import uuid
 import base64
 
 BASE_PATH = Path(__file__).resolve().parent.parent.parent
-CHAT_MEMORY_PATH = BASE_PATH / "AI_Model" / "memory_cache"
-CHAT_LIST_FILE = BASE_PATH / "AI_Model" / "memory_cache" / "chat.jsonl"
+CHAT_MEMORY_PATH = BASE_PATH / "cache" / "memory_cache"
+CHAT_LIST_FILE = BASE_PATH / "cache" / "memory_cache" / "chat.jsonl"
 
 
 class MainChatHistory:

@@ -9,7 +9,7 @@ class VectorMemory:
     def __init__(
         self,
         chat_id: str,
-        base_dir="AI_Model/memory_cache",
+        base_dir="cache/memory_cache",
         embed_model="mxbai-embed-large",
         max_embed_chars=2000,
         max_store_chars=3000,
