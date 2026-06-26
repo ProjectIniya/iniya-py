@@ -8,6 +8,7 @@ temp/
 .env
 skip
 *.log
+*.zip
 sample.*
 test.py
 test_agent.py
