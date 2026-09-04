@@ -2,7 +2,7 @@
 
 ### Local-First Personal AI Assistant Platform
 
-**Status:** Active Development
+**Status:** NOT BEING DEVELOPED
 
 Iniya is a local-first AI assistant platform designed to combine conversational AI, long-term memory, voice interaction, tool execution, search, coding assistance, and task management into a unified personal AI system.
 
